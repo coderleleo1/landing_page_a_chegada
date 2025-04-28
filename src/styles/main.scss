@@ -1,5 +1,73 @@
+@use 'var';
+@use 'header';
+@use 'hero';
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: var.$corFontePrimaria;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: var.$corFonteSecundaria;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text();
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title();
+}
+
+.title--small{
+    @include title(28px);
+}
+
+.button {
+    background-color: var.$corBotaoPrimario;
+    color: var.$corFontePrimaria;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 100%;
+    border: 1px solid var.$corBotaoPrimario;
+    border-radius: 4px;
+    padding: 8px 14px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var.$corFonteSecundaria;;
+        border: 1px solid var.$corFonteSecundaria;
+        color: var.$corBotaoPrimario;
+    }
+
+    &--light {
+
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var.$corDeFundo;
 }

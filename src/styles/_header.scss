@@ -1,0 +1,30 @@
+@use 'var';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 48px;
+        background-color: var.$corDeFundoHeader;
+    }
+
+    &__logo {
+        img {
+            max-width: 200px;
+            width: 100%;
+        }
+    }
+
+    &__links {
+
+        &__item {
+            display: inline;
+            margin-right: 16px;
+        }
+    }
+}
