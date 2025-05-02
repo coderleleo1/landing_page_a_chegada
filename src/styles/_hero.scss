@@ -1,6 +1,64 @@
+
+
 .hero {
-    background-image: url(../../dist/images/hero\ 2.jpeg);
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0)), 
+        url(../../dist/images/hero\ 2.jpeg);
     padding: 5.6vh;
     min-height: 45vw;
     background-size: cover;
+    text-align: center;
+
+    .text--small,  .text{
+        color: rgb(172, 172, 172);
+    }
+
+    .button {
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    &__content {
+        max-width: 800px;
+
+        &__branding {
+            margin: 0 auto 20px;
+
+            img {
+                width: 600px;
+            }
+        }
+
+        h3 {
+            padding: 12px;
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-top: 60px;
+            }
+        }
+
+        &__platforms { 
+            display: flex;
+            justify-content: space-between;
+
+            &__streaming {
+                width: calc(50% - 12px);
+                padding: 20px;
+
+                img {
+                    max-height: 100px;
+                }
+            }
+        }
+    }
+
+
 }
