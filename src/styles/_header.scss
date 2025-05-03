@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+
     &__container {
         display: flex;
         align-items: center;
@@ -15,8 +16,7 @@
 
     &__logo {
         img {
-            max-width: 200px;
-            width: 100%;
+            width: 200px;
         }
     }
 

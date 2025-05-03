@@ -16,16 +16,55 @@
             font-size: 20px;
             text-transform: uppercase;
             color: var.$corFonteSecundaria;
-            border-bottom: 5px solid #fff;
             cursor: pointer;
+
+            &--is-active {
+                border-bottom: 5px solid #fff;
+            }
         }
     }
 
     &__images {
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
         margin-top: 44px;
+
+        p {
+            text-align: center;
+        }
+
+        &:last-child {
+            p {
+                margin-bottom: 16px;
+            }
+        }
+
+        .img-reduce {
+            width: 85%;
+
+            &--more {
+                width: 75.7%;
+            }
+        }
+
+        &__language {
+            display: none;
+            grid-template-columns: 1fr 1fr 2fr;
+            padding-left: 70px;
+
+            .img-reduce {
+                width: 85%;
+
+                &--more {
+                    width: 75.7%;
+                }
+            }
+        }
+
+        &--is-active {
+            display: grid;
+        }
 
         &__item {
             img {
