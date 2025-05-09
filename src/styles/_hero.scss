@@ -9,8 +9,10 @@
     background-size: cover;
     text-align: center;
 
-    .text--small,  .text{
-        color: rgb(172, 172, 172);
+    @media (max-width: 768px) {
+        padding-top: calc(50vw + 50px);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .button {
@@ -20,12 +22,22 @@
 
     &__content {
         max-width: 800px;
+        margin-left: 80px;
+
+        @media (max-width: 768px) {
+            margin: 0;
+        }
 
         &__branding {
             margin: 0 auto 20px;
 
             img {
                 width: 700px;
+
+                @media (max-width: 768px) {
+                max-width: 300px;
+                margin: 0 auto 38px;
+                }
             }
         }
 
@@ -33,8 +45,9 @@
             padding: 12px;
         }
 
-        .title--small {
-            margin-bottom: 64px;
+        .title {
+            margin-bottom: 26px;
+            margin-top: 60px;
         }
 
         p {
@@ -45,20 +58,20 @@
             }
         }
 
-        &__platforms { 
-            display: flex;
-            justify-content: space-between;
+        &__view {
+            margin: 32px 0 32px 0;
 
-            &__streaming {
-                width: calc(50% - 12px);
-                padding: 20px;
+            &__trailer {
+                iframe {
+                    width: 100%;
+                    height: 450px;
 
-                img {
-                    max-height: 100px;
+                    @media (max-width: 768px) {
+                    width: 100%;
+                    height: 200px;
+                }
                 }
             }
         }
     }
-
-
 }

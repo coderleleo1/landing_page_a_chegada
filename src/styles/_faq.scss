@@ -1,0 +1,66 @@
+@use 'var';
+
+.faq {
+    padding: 5.6vw;
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__questions {
+
+        &__item {
+            background-color: darken(var.$corDeFundo, 5%);
+            margin-bottom: 16px;
+            border-radius: 8px;
+
+            &__question {
+                color: var.$corFontePrimaria;
+                font-size: 20px;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                }
+            }
+
+            &__answer { 
+                height: 0;
+                color: var.$corFonteSecundaria;
+                padding: 0 24px;
+                overflow: hidden;
+                transition: height, 0.6s ease;
+
+                &__link {
+                    text-decoration: underline;
+                    color:var.$corFontePrimaria;
+                    cursor: pointer;
+                }
+            }
+
+            &--is-open {
+                .faq__questions__item__question::after {
+                    content: '_';
+                    font-size: 35px;
+                }
+
+                .faq__questions__item__answer {
+                    height: auto;
+                    padding-bottom: 24px;
+                    transition: height, 0.6s ease;
+                }
+            }
+        }
+    }
+}

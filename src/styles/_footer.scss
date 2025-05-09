@@ -1,0 +1,68 @@
+@use 'var';
+
+.footer {
+    padding: 26px 8px;
+    background-color: darken(var.$corDeFundo, 5%);
+
+    &__container { 
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 26px;
+    }
+
+    &__logo {
+        width: 140px;
+        margin: 0 auto 10px;
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        &__item {
+            margin-bottom: 16px;
+            
+            a {
+                text-decoration: none;
+                padding: 8px 16px;
+                display: block;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: var.$corFontePrimaria;
+                }
+            }
+
+            .language-selector {
+                display: flex;
+                align-items: center;
+
+                img {
+                    height: 18px;
+                    width: 18px;
+                }
+
+                select {
+                    background-color: transparent;
+                    color: var.$corFonteSecundaria;
+                    border-color: darken(var.$corDeFundo, 5%);
+                    height: 38px;
+                    padding-right: 10px;
+
+                    &:hover {
+                        color: var.$corFontePrimaria;
+                    }
+
+                    option {
+                        color: var.$corDeFundo;
+                    }
+                }
+            }
+        }
+    }
+}
+

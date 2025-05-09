@@ -2,40 +2,67 @@
 @use 'header';
 @use 'hero';
 @use 'movie';
+@use 'platforms';
+@use 'image-text';
+@use 'faq';
+@use 'footer';
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
-    color: var.$corFontePrimaria;
+    color: var.$corFonteSecundaria;
 }
 
 @mixin title($fontSize: 40px) {
     @include text($fontSize);
-    color: var.$corFonteSecundaria;
+    color: var.$corFontePrimaria;
 }
 
 .text--big {
     @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px)
+    }
 }
 
 .text {
     @include text();
+    
+    @media (max-width: 768px) {
+        @include text(14px)
+    }
 }
 
 .text--small {
     @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(11px)
+    }
 }
 
 .title--big {
     @include title(44px);
+
+    @media (max-width: 768px) {
+        @include title(26px)
+    }
 }
 
 .title {
     @include title();
+    @media (max-width: 768px) {
+        @include title(24px)
+    }
 }
 
 .title--small{
     @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title(22px)
+    }
 }
 
 .button {
@@ -52,7 +79,7 @@
     cursor: pointer;
 
     &:hover {
-        background-color: var.$corFonteSecundaria;;
+        background-color: var.$corFontePrimaria;
         border: 1px solid var.$corFonteSecundaria;
         color: var.$corBotaoPrimario;
     }

@@ -1,7 +1,7 @@
 @use 'var';
 
 .movie {
-    padding: 2vw 5.6vw;
+    padding: 2vw 5vw;
     min-height: 50vw;
 
     &__tabs {
@@ -13,9 +13,7 @@
             background: none;
             padding-bottom: 5px;
             margin: 0 1vw;
-            font-size: 20px;
             text-transform: uppercase;
-            color: var.$corFonteSecundaria;
             cursor: pointer;
 
             &--is-active {
@@ -29,6 +27,21 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
         margin-top: 44px;
+
+        &:nth-child(4) {
+            @media (max-width: 763px) {
+                padding-left: 12vw;
+                
+                p {
+                    padding: 0 2px;
+                }
+            }
+    }
+
+        @media (max-width: 763px) {
+            grid-template-columns: 1fr;
+            margin-bottom: 50px;
+        }
 
         p {
             text-align: center;
@@ -53,11 +66,19 @@
             grid-template-columns: 1fr 1fr 2fr;
             padding-left: 70px;
 
+            @media (max-width: 763px) {
+                grid-template-columns: 1fr;
+            }
+
             .img-reduce {
                 width: 85%;
 
                 &--more {
                     width: 75.7%;
+
+                    @media (max-width: 763px) {
+                        display: none;
+                    }
                 }
             }
         }
